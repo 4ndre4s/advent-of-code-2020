@@ -4,7 +4,7 @@ module.exports = {
   getInputOfCurrentDay (dirname) {
     return fs.promises.readFile(dirname + '/input.txt')
   },
-  getLinesOfFile (file) {
-    return file.toString().split('\r\n')
+  getFilledLinesOfFile (file) {
+    return file.toString().split('\r\n').filter(v => v.length !== 0)
   }
 }
