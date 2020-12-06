@@ -1,8 +1,8 @@
-const fs = require('fs')
+const fileUtil = require('../../util/fileUtil')
 const SolutionOfDay = require('../../SolutionOfDay')
 
 module.exports = async function () {
-  const file = await fs.promises.readFile(__dirname + '/input.txt')
+  const file = await fileUtil.getInputOfCurrentDay(__dirname)
   const listOfNumbers = file.toString().split('\r\n').map(Number)
   const uniqueNumbers = new Set(listOfNumbers)
 
