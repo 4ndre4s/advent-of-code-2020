@@ -1,5 +1,10 @@
-const solution = require('./solutions/02/solution.js');
+const fs = require('fs');
 
 (async function main () {
-  console.log((await solution()).toString())
+  const solvedDays = await fs.promises.readdir('./solutions')
+  solvedDays.forEach(solution => {
+    require('./solutions/' + solution + '/solution.js')().then(solution => {
+      console.log(solution.toString());
+    })
+  })
 })()
