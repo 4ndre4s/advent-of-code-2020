@@ -1,6 +1,5 @@
 const fs = require('fs')
-const fsAsync = fs.promises
-const SolutionResponse = require('../../SolutionOfTask')
+const SolutionOfDay = require('../../SolutionOfDay')
 
 module.exports = async function () {
   const file = await fs.promises.readFile(__dirname + '/input.txt')
@@ -19,7 +18,7 @@ module.exports = async function () {
       factor1 = candidate
       factor2 = number
       return true
-    }
-  )
-  return new SolutionResponse("01", factor1 * factor2)
+    })
+
+  return new SolutionOfDay("01", factor1 * factor2)
 }

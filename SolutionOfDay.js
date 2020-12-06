@@ -1,4 +1,4 @@
-class SolutionOfTask {
+class SolutionOfDay {
   constructor (name, result) {
     this.name = name
     this.result = result
@@ -8,4 +8,4 @@ class SolutionOfTask {
   }
 }
 
-module.exports = SolutionOfTask
+module.exports = SolutionOfDay
