@@ -6,7 +6,7 @@ class SolutionOfDay {
   }
 
   toString () {
-    return `${this.day.toString().padStart(2, '0')}:\n\t1: ${this.part1}\n\t2: ${this.part2}`
+    return `Day ${this.day.toString().padStart(2, '0')}:\n\t1: ${this.part1}\n\t2: ${this.part2}`
   }
 }
 
