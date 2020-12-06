@@ -3,7 +3,7 @@ const SolutionOfDay = require('../../util/SolutionOfDay')
 
 module.exports = async function () {
   const file = await fileUtil.getInputOfCurrentDay(__dirname)
-  const listOfNumbers = fileUtil.getFilledLinesOfFile(file).map(Number)
+  const listOfNumbers = fileUtil.getNonBlankLinesOfFile(file).map(Number)
   const uniqueNumbers = new Set(listOfNumbers)
 
   const EXPECTED_SUM = 2020

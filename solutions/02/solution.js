@@ -3,7 +3,7 @@ const SolutionOfDay = require('../../util/SolutionOfDay')
 
 module.exports = async function () {
   const file = await fileUtil.getInputOfCurrentDay(__dirname)
-  const lines = fileUtil.getFilledLinesOfFile(file)
+  const lines = fileUtil.getNonBlankLinesOfFile(file)
 
   const part1 = solvePartOne()
   const part2 = solvePartTwo()
