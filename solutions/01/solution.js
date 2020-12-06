@@ -9,6 +9,7 @@ module.exports = async function () {
   const EXPECTED_SUM = 2020
 
   const partOne = calculatePartOne()
+  const partTwo = calculatePartTwo()
 
   return new SolutionOfDay(1, partOne, partTwo)
 
@@ -23,6 +24,25 @@ module.exports = async function () {
       product = number * candidate
       return true
     })
+    return product
+  }
+
+  function calculatePartTwo () {
+    let product = 0
+    let LENGTH = listOfNumbers.length
+    for (let i = 0; i < LENGTH; i++) {
+      for (let j = 0; j < LENGTH; j++) {
+        for (let k = 0; k < LENGTH; k++) {
+          const numI = listOfNumbers[i]
+          const numJ = listOfNumbers[j]
+          const numK = listOfNumbers[k]
+          if (numI + numJ + numK === EXPECTED_SUM && numI * numJ * numK !== 0) {
+            product = numI * numJ * numK
+            LENGTH = 0
+          }
+        }
+      }
+    }
     return product
   }
 }
