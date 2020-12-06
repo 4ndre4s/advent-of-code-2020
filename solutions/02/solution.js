@@ -1,5 +1,5 @@
 const fileUtil = require('../../util/fileUtil')
-const SolutionOfDay = require('../../SolutionOfDay')
+const SolutionOfDay = require('../../util/SolutionOfDay')
 
 module.exports = async function () {
   const file = await fileUtil.getInputOfCurrentDay(__dirname)
