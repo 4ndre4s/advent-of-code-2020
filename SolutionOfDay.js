@@ -1,10 +1,12 @@
 class SolutionOfDay {
-  constructor (name, result) {
-    this.name = name
-    this.result = result
+  constructor (day, part1, part2) {
+    this.day = day
+    this.part1 = part1
+    this.part2 = part2
   }
+
   toString () {
-    return `${this.name}: ${this.result}`
+    return `${this.day.toString().padStart(2, '0')}:\n\t1: ${this.part1}\n\t2: ${this.part2}`
   }
 }
 
